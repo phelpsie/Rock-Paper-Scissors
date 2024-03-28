@@ -19,3 +19,21 @@ function getPlayerChoice() {
     playerChoice.toLowerCase();
     return playerChoice;
 }
+
+
+
+
+
+function game() {
+    getComputerChoice();
+    getPlayerChoice();
+    if (playerChoice === computerChoice) {
+        console.log('tie! ' + playerChoice + ' is equal to ' + computerChoice + '.');
+    } else if (playerChoice === 'rock' && computerChoice === 'scissors'
+    || playerChoice === 'scissors' && computerChoice === 'paper'
+    || playerChoice === 'paper' && computerChoice === 'rock') {
+        console.log('You win! ' + playerChoice + ' beats ' + computerChoice + '!');
+    } else {
+        console.log('You lose! ' + computerChoice + ' beats ' + playerChoice + '!');
+    }
+}
