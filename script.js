@@ -1,3 +1,5 @@
+let playerChoice;
+
 function getComputerChoice() {
     let min = 1;
     let max = 99;
@@ -9,4 +11,9 @@ function getComputerChoice() {
     } else {
         console.log('scissors');
     }
+}
+
+function getPlayerChoice() {
+    playerChoice = prompt('rock, paper, or scissors?','');
+    playerChoice.toLowerCase();
 }
