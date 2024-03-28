@@ -1,19 +1,21 @@
 let playerChoice;
+let computerChoice;
 
 function getComputerChoice() {
     let min = 1;
     let max = 99;
     let num = Math.floor(Math.random() * (99)) + 1;
     if (num < 33) {
-        console.log('rock');
+        return computerChoice ='rock';
     } else if (num < 66) {
-        console.log('paper');
+        return computerChoice ='paper';
     } else {
-        console.log('scissors');
+        return computerChoice ='scissors';
     }
 }
 
 function getPlayerChoice() {
     playerChoice = prompt('rock, paper, or scissors?','');
     playerChoice.toLowerCase();
+    return playerChoice;
 }
