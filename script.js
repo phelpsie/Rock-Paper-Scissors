@@ -42,5 +42,5 @@ function playRounds() {
     for (let i = 0; i < 5; i++) {
         game();
 }
-console.log('The final score is ' + playerScore + ' to ' + computerScore + '.')
+console.log('The final score is player:' + playerScore + ' to computer:' + computerScore + '.')
 }
