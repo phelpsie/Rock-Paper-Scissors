@@ -20,10 +20,6 @@ function getPlayerChoice() {
     return playerChoice;
 }
 
-
-
-
-
 function game() {
     getComputerChoice();
     getPlayerChoice();
@@ -35,5 +31,11 @@ function game() {
         console.log('You win! ' + playerChoice + ' beats ' + computerChoice + '!');
     } else {
         console.log('You lose! ' + computerChoice + ' beats ' + playerChoice + '!');
+    }
+}
+
+function playRounds() {
+    for (let i = 0; i < 5; i++) {
+        game();
     }
 }
