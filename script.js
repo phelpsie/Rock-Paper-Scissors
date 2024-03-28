@@ -1,5 +1,7 @@
 let playerChoice;
 let computerChoice;
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     let min = 1;
@@ -29,13 +31,16 @@ function game() {
     || playerChoice === 'scissors' && computerChoice === 'paper'
     || playerChoice === 'paper' && computerChoice === 'rock') {
         console.log('You win! ' + playerChoice + ' beats ' + computerChoice + '!');
+        return ++playerScore;
     } else {
         console.log('You lose! ' + computerChoice + ' beats ' + playerChoice + '!');
+        return ++computerScore;
     }
 }
 
 function playRounds() {
     for (let i = 0; i < 5; i++) {
         game();
-    }
+}
+console.log('The final score is ' + playerScore + ' to ' + computerScore + '.')
 }
