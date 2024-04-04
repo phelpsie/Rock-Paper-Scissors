@@ -22,7 +22,7 @@ function getPlayerChoice() {
     return playerChoice;
 }
 
-function game() {
+function playRound() {
     getComputerChoice();
     getPlayerChoice();
     if (playerChoice === computerChoice) {
@@ -38,9 +38,15 @@ function game() {
     }
 }
 
-function playRounds() {
+function playGame() {
     for (let i = 0; i < 5; i++) {
-        game();
+        playRound();
 }
-console.log('The final score is player:' + playerScore + ' to computer:' + computerScore + '.')
+    if (playerScore > computerScore) {
+    console.log('The final score is player: ' + playerScore + ' to computer: ' + computerScore + '. You Win!');
+} else if (playerScore === computerScore) {
+    console.log('The final score is player: ' + playerScore + ' to computer: ' + computerScore + '. It\'s a tie!');
+} else {
+    console.log('The final score is player: ' + playerScore + ' to computer: ' + computerScore + '. You Lose!');
+}
 }
