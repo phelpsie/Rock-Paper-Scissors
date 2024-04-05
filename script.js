@@ -42,7 +42,8 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
         playRound();
 }
-    if (playerScore > computerScore) {
+
+if (playerScore > computerScore) {
     console.log('The final score is player: ' + playerScore + ' to computer: ' + computerScore + '. You Win!');
 } else if (playerScore === computerScore) {
     console.log('The final score is player: ' + playerScore + ' to computer: ' + computerScore + '. It\'s a tie!');
@@ -50,3 +51,5 @@ function playGame() {
     console.log('The final score is player: ' + playerScore + ' to computer: ' + computerScore + '. You Lose!');
 }
 }
+
+playGame();
