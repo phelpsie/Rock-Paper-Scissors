@@ -39,9 +39,9 @@ function playRound() {
 }
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {
+    //for (let i = 0; i < 5; i++) {
         playRound();
-}
+//}
 
 if (playerScore > computerScore) {
     console.log('The final score is player: ' + playerScore + ' to computer: ' + computerScore + '. You Win!');
@@ -52,4 +52,4 @@ if (playerScore > computerScore) {
 }
 }
 
-playGame();
+// playGame();
