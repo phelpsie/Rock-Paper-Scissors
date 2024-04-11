@@ -16,15 +16,15 @@ function getComputerChoice() {
     }
 }
 
-function getPlayerChoice() {
-    playerChoice = prompt('rock, paper, or scissors?','');
-    playerChoice.toLowerCase();
-    return playerChoice;
-}
+//function getPlayerChoice() {
+//    playerChoice = prompt('rock, paper, or scissors?','');
+//   playerChoice.toLowerCase();
+//    return playerChoice;
+//}
 
 function playRound() {
     getComputerChoice();
-    getPlayerChoice();
+    //getPlayerChoice();
     if (playerChoice === computerChoice) {
         console.log('tie! ' + playerChoice + ' is equal to ' + computerChoice + '.');
     } else if (playerChoice === 'rock' && computerChoice === 'scissors'
@@ -53,3 +53,27 @@ if (playerScore > computerScore) {
 }
 
 // playGame();
+
+//Added Buttons:
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+rock.addEventListener('click', function playerChoiceRock() {
+    playerChoice = 'rock';
+    playRound();
+});
+
+paper.addEventListener('click', function playerChoicePaper() {
+    playerChoice = 'paper';
+    playRound();
+});
+
+scissors.addEventListener('click', function playerChoiceScissors() {
+    playerChoice = 'scissors';
+    playRound();
+});
+
+
+
