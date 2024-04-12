@@ -64,28 +64,43 @@ const scissors = document.querySelector('#scissors');
 rock.addEventListener('click', function playerChoiceRock() {
     playerChoice = 'rock';
     playRound();
-    let div = document.querySelector('div');
-    let p = document.querySelector('p');
-    p.textContent = roundResult;
-    div.appendChild(p);
+    let announcerDiv = document.querySelector('.announcerDiv');
+    let announcerText = document.querySelector('.announcerText');
+    announcerText.textContent = roundResult;
+    announcerDiv.appendChild(announcerText);
+
+    let scoreboard = document.querySelector('.scoreboard');
+    let score = document.querySelector('.score');
+    score.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
+    scoreboard.appendChild(score);
 });
 
 paper.addEventListener('click', function playerChoicePaper() {
     playerChoice = 'paper';
     playRound();
-    let div = document.querySelector('div');
-    let p = document.querySelector('p');
-    p.textContent = roundResult;
-    div.appendChild(p);
+    let announcerDiv = document.querySelector('.announcerDiv');
+    let announcerText = document.querySelector('.announcerText');
+    announcerText.textContent = roundResult;
+    announcerDiv.appendChild(announcerText);
+
+    let scoreboard = document.querySelector('.scoreboard');
+    let score = document.querySelector('.score');
+    score.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
+    scoreboard.appendChild(score);
 });
 
 scissors.addEventListener('click', function playerChoiceScissors() {
     playerChoice = 'scissors';
     playRound();
-    let div = document.querySelector('div');
-    let p = document.querySelector('p');
-    p.textContent = roundResult;
-    div.appendChild(p);
+    let announcerDiv = document.querySelector('.announcerDiv');
+    let announcerText = document.querySelector('.announcerText');
+    announcerText.textContent = roundResult;
+    announcerDiv.appendChild(announcerText);
+
+    let scoreboard = document.querySelector('.scoreboard');
+    let score = document.querySelector('.score');
+    score.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
+    scoreboard.appendChild(score);
 });
 
 
