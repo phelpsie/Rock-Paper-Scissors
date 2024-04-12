@@ -4,4 +4,28 @@ body {
 
 button {
     align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#rock:active {
+    background-color: grey;
+    color: black;
+    border: gray;
+}
+
+#paper:active {
+    background-color: white;
+    color: black;
+    border: white;
+}
+
+#scissors:active {
+    background-color: red;
+    color: silver;
+    border: red;
 }
