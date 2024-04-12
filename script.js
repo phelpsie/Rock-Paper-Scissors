@@ -2,6 +2,7 @@ let playerChoice;
 let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
+let roundResult;
 
 function getComputerChoice() {
     let min = 1;
@@ -26,14 +27,14 @@ function playRound() {
     getComputerChoice();
     //getPlayerChoice();
     if (playerChoice === computerChoice) {
-        console.log('tie! ' + playerChoice + ' is equal to ' + computerChoice + '.');
+        roundResult = 'Tie! ' + playerChoice + ' is equal to ' + computerChoice + '.';
     } else if (playerChoice === 'rock' && computerChoice === 'scissors'
     || playerChoice === 'scissors' && computerChoice === 'paper'
     || playerChoice === 'paper' && computerChoice === 'rock') {
-        console.log('You win! ' + playerChoice + ' beats ' + computerChoice + '!');
+        roundResult = 'You win! ' + playerChoice + ' beats ' + computerChoice + '!';
         return ++playerScore;
     } else {
-        console.log('You lose! ' + computerChoice + ' beats ' + playerChoice + '!');
+        roundResult = 'You lose! ' + computerChoice + ' beats ' + playerChoice + '!';
         return ++computerScore;
     }
 }
@@ -63,16 +64,28 @@ const scissors = document.querySelector('#scissors');
 rock.addEventListener('click', function playerChoiceRock() {
     playerChoice = 'rock';
     playRound();
+    let div = document.querySelector('div');
+    let p = document.querySelector('p');
+    p.textContent = roundResult;
+    div.appendChild(p);
 });
 
 paper.addEventListener('click', function playerChoicePaper() {
     playerChoice = 'paper';
     playRound();
+    let div = document.querySelector('div');
+    let p = document.querySelector('p');
+    p.textContent = roundResult;
+    div.appendChild(p);
 });
 
 scissors.addEventListener('click', function playerChoiceScissors() {
     playerChoice = 'scissors';
     playRound();
+    let div = document.querySelector('div');
+    let p = document.querySelector('p');
+    p.textContent = roundResult;
+    div.appendChild(p);
 });
 
 
